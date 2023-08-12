@@ -16,7 +16,7 @@ export const Header = () => {
       >
         <h1>
           <GiPokecog className={styles.icon__logo} />
-          PokeDex
+          PokeDex Zane
         </h1>
       </Link>
 

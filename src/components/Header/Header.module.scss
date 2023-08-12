@@ -25,6 +25,10 @@
       font-size: 5rem;
       font-weight: 700;
       text-transform: uppercase;
+
+      .icon__logo {
+        animation: rotate 1s linear infinite;
+      }
     }
   }
 
@@ -61,5 +65,14 @@
       transform: translate(-50%, -50%);
       width: 35px;
     }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(100deg);
   }
 }
