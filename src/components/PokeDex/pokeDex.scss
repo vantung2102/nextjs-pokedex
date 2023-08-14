@@ -1,0 +1,62 @@
+.pokeDex {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  padding: 0 5.6rem;
+  padding-top: 18rem;
+
+  &__item {
+    background-color: #fff;
+    border-radius: 8px;
+    height: 260px;
+    position: relative;
+  }
+
+  &__content {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+
+    &_img {
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.22s ease-out;
+    }
+
+    &_name {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #333;
+      text-transform: capitalize;
+    }
+
+    &_type {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: capitalize;
+      margin-top: 2rem;
+      color: #fff;
+
+      .type {
+        font-size: 1.2rem;
+        padding: 0.4rem 1rem;
+        background-color: #ff421c;
+        border-radius: 4px;
+
+        &:last-child {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}

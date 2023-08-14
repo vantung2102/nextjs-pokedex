@@ -1,20 +1,24 @@
+import { Skeleton } from '@chakra-ui/react';
+import { useFetch } from 'hooks';
 import React from 'react';
+import { getPokeDex } from 'services/pokeDex';
+import './pokeDex.scss';
+import { Pokemon } from 'components';
 
-type Props = {};
+export const PokeDex = () => {
+  const endpoint = '/pokemon?limit=20&offset=0';
+  const { data, error, isLoading, isValidating, mutate } = useFetch(endpoint, getPokeDex);
 
-export const PokeDex = (props: Props) => {
-  return (
+  return isLoading ? (
+    <Skeleton />
+  ) : (
     <div className='pokeDex'>
-      <div className='poke__item'>
-        <div className='poke__content'>
-          <img
-            src='/'
-            alt=''
-            className='poke__content-img'
-          />
-          <div className='poke__content-title'></div>
-        </div>
-      </div>
+      {data?.results?.map((pokemon: any, index: number) => (
+        <Pokemon
+          id={index + 1}
+          name={pokemon.name}
+        />
+      ))}
     </div>
   );
 };
