@@ -1,13 +1,12 @@
 'use client';
-import { Header, PokeDex } from 'components';
 import React from 'react';
+import { PokeDex } from 'components';
+import { Application } from 'layouts';
 
 export default function Home() {
   return (
-    <>
-      <Header />
-
+    <Application>
       <PokeDex />
-    </>
+    </Application>
   );
 }

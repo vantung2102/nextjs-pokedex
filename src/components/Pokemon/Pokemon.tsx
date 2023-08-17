@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 type Props = {
@@ -24,6 +25,12 @@ export const Pokemon = (props: Props) => {
             <p className='type'>bug</p>
             <p className='type'>bug</p>
           </div>
+          <Link
+            href={`pokemon/${id}`}
+            className='more'
+          >
+            More
+          </Link>
         </div>
       </div>
     </div>

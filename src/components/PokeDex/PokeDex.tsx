@@ -1,9 +1,10 @@
+import React from 'react';
 import { Skeleton } from '@chakra-ui/react';
 import { useFetch } from 'hooks';
-import React from 'react';
 import { getPokeDex } from 'services/pokeDex';
-import './pokeDex.scss';
 import { Pokemon } from 'components';
+
+import './pokeDex.scss';
 
 export const PokeDex = () => {
   const endpoint = '/pokemon?limit=20&offset=0';
