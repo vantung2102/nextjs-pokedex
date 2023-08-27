@@ -8,7 +8,6 @@ type Props = {
 
 export const Pokemon = (props: Props) => {
   const { id, name } = props;
-  console.log(props);
 
   const images = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`;
 

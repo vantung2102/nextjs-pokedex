@@ -7,12 +7,6 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  position: fixed;
-  z-index: 999999;
-
-  a {
-    text-decoration: none;
-  }
 
   .logo {
     align-items: center;
@@ -33,12 +27,7 @@
   }
 
   .search {
-    margin-top: 2rem;
-    position: fixed;
-    right: 5rem;
-    top: 12px;
-    z-index: 1000000;
-
+    position: relative;
     input {
       border-radius: 8px;
       font-size: 2rem;
