@@ -1,22 +1,39 @@
+'use client';
 import Link from 'next/link';
+
+import { Profile, Slider, Stats } from 'components';
+
 import './page.scss';
+import { Fragment } from 'react';
 
 const Page = () => {
   return (
-    <div className='contents pokemon-detail-contents'>
+    <div className='pokemon-detail-contents'>
       <div className='pokemon-detail'>
         <div className='pokemon-detail__header'>
           <div className='pokemon-detail__header__inner'>
-            <span className='size-20'>
+            <span>
               <Link href='/'>PokeDex</Link>
             </span>
           </div>
         </div>
-        <div className='pokemon-detail__slider'></div>
-        <div className='pokemon-detail__profile'></div>
-        <div className='pokemon-detail__stats'></div>
+
+        <Fragment>
+          <Slider />
+        </Fragment>
+
+        <Fragment>
+          <Profile />
+        </Fragment>
+
+        <Fragment>
+          <Stats />
+        </Fragment>
+
         <div className='pokemon-detail__style'></div>
+
         <div className='pokemon-detail__evolutions'></div>
+
         <div className='pokemon-detail__back'></div>
       </div>
     </div>

@@ -1,0 +1,80 @@
+.slider {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: #b3eafe;
+
+  .wrapper {
+    width: 29%;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 0;
+      padding-top: 25%;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 18%;
+    cursor: pointer;
+    width: 15%;
+
+    &.left {
+      left: 10%;
+    }
+
+    &.right {
+      right: 10%;
+    }
+  }
+
+  .arrow-left,
+  .arrow-right {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/icons/left_arrow.png');
+  }
+
+  .arrow-right {
+    background-image: url('../../assets/icons/right_arrow.png');
+  }
+
+  .pokemon-info {
+    position: absolute;
+    top: 18%;
+    font-size: 2.4rem;
+
+    &.left-id {
+      left: 35%;
+    }
+
+    &.left-name {
+      left: 47%;
+      color: #fff;
+    }
+
+    &.right-id {
+      right: 35%;
+    }
+
+    &.right-name {
+      right: 47%;
+      color: #fff;
+    }
+  }
+
+  .main {
+    &-id {
+      font-size: 4rem;
+    }
+
+    &-name {
+      color: #fff;
+      font-size: 5rem;
+      text-shadow: 0 0 3px #000, 2px 2px 7px #9be1ff, -2px -2px 7px #9be1ff;
+    }
+  }
+}

@@ -6,7 +6,7 @@ type Props = {
   name: string;
 };
 
-export const Pokemon = (props: Props) => {
+const Pokemon = (props: Props) => {
   const { id, name } = props;
 
   const images = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${id}.gif`;
@@ -35,3 +35,5 @@ export const Pokemon = (props: Props) => {
     </div>
   );
 };
+
+export default Pokemon;
