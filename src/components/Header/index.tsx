@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { GiPokecog } from 'react-icons/gi';
 import { FiSearch } from 'react-icons/fi';
-import styles from './Header.module.scss';
+import styles from './header.module.scss';
 
-export const Header = () => {
+const Header = () => {
   const [searchValue, setSearchValue] = useState<any>();
 
   return (
@@ -34,3 +34,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;

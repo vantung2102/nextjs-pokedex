@@ -6,7 +6,7 @@ import { Pokemon } from 'components';
 
 import './pokeDex.scss';
 
-export const PokeDex = () => {
+const PokeDex = () => {
   const endpoint = '/pokemon?limit=20&offset=0';
   const { data, error, isLoading, isValidating, mutate } = useFetch(endpoint, getPokeDex);
 
@@ -23,3 +23,5 @@ export const PokeDex = () => {
     </div>
   );
 };
+
+export default PokeDex;

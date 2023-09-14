@@ -1,8 +1,39 @@
 .pokemon-detail-contents {
-  background-image: url('../../../assets/main_bg_v15.jpg');
+  background-image: url('../../../assets/images/background.jpg');
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: top;
   background-color: #0a141e;
   height: 1700px;
+}
+
+.pokemon-detail {
+  &__header {
+    margin: 0 auto;
+    position: relative;
+    z-index: 150;
+
+    &__inner {
+      &:after {
+        content: '';
+        height: 0;
+        display: block;
+        padding-top: 9.28571429%;
+      }
+
+      span {
+        position: absolute;
+        top: 38%;
+        text-align: center;
+        width: 100%;
+
+        a {
+          font-size: 2.8rem;
+          color: #0a141e;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+      }
+    }
+  }
 }
